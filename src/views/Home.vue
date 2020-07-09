@@ -1,11 +1,8 @@
 <!--  -->
 <template>
-  <div class>
-    <el-container>
-      <el-header>Header</el-header>
-      <el-main>Main</el-main>
-      <el-footer>Footer</el-footer>
-    </el-container>
+  <div class="home">
+    <div class="up"></div>
+    <div class="down"></div>
   </div>
 </template>
 
@@ -50,38 +47,17 @@ export default {
 }
 </script>
 <style scoped>
-.el-header,
-.el-footer {
-  background-color: #b3c0d1;
-  color: #333;
-  text-align: center;
-  line-height: 60px;
+.home {
+  height: 100vh;
 }
-
-.el-aside {
-  background-color: #d3dce6;
-  color: #333;
-  text-align: center;
-  line-height: 200px;
+.up {
+  width: 100vw;
+  height: 50vh;
+  background: #b3c0d1;
 }
+.down {
+  width: 100vw;
+  height: 50vh;
 
-.el-main {
-  background-color: #e9eef3;
-  color: #333;
-  text-align: center;
-  line-height: 160px;
-}
-
-body > .el-container {
-  margin-bottom: 40px;
-}
-
-.el-container:nth-child(5) .el-aside,
-.el-container:nth-child(6) .el-aside {
-  line-height: 260px;
-}
-
-.el-container:nth-child(7) .el-aside {
-  line-height: 320px;
 }
 </style>
