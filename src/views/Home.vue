@@ -1,8 +1,41 @@
 <!--  -->
 <template>
-  <div class="home">
-    <div class="up"></div>
-    <div class="down"></div>
+  <div class="container">
+    <header>
+      <div class="area">一楼内科候诊区</div>
+      <div class="date">2020年7月10日 15:13 星期五</div>
+    </header>
+    <div class="up">
+      <div class="call-message" v-for="(item, index) in contents" :key="index">{{item}}</div>
+    </div>
+    <div class="down">
+      <div class="card-table">
+        <div class="col">
+          <div class="table">
+            <h2>regular</h2>
+            <div class="pop">占位</div>
+            <div class="price">
+              <span>占位</span>
+            </div>
+            <ul>
+              <li>
+                <strong>A001</strong>周杰伦
+              </li>
+              <li>
+                <strong>A002</strong>林书豪
+              </li>
+              <li>
+                <strong>A003</strong>张学友
+              </li>
+              <li>
+                <strong>A004</strong>张国荣
+              </li>
+            </ul>
+            <a href="#">buy now</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -16,7 +49,7 @@ export default {
   data() {
     //这里存放数据
     return {
-
+      contents: ['请周杰伦到内科一诊室就诊', '请张三丰到内科一诊室就诊', '请张无忌到内科一诊室就诊', '请令狐冲到内科一诊室就诊']
     }
   },
   //接收父组件数据
@@ -47,17 +80,55 @@ export default {
 }
 </script>
 <style scoped>
-.home {
-  height: 100vh;
-}
-.up {
+.container {
   width: 100vw;
-  height: 50vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  width: 100%;
+  height: 35px;
+  background-color: beige;
+  display: flex;
+  text-align: center;
+  line-height: 35px;
+}
+
+header .area {
+  flex: 1;
+  font-size: 25px;
   background: #b3c0d1;
 }
-.down {
-  width: 100vw;
-  height: 50vh;
-
+header .date {
+  flex: 0.4;
+  font-size: 14px;
+  background-color: beige;
 }
+
+.up {
+  font-size: 14px;
+  flex: 1;
+  border: 2px solid #eee;
+  text-align: center;
+}
+.up .call-message {
+  margin-top: 8.5px;
+  height: 26.5px;
+  line-height: 26.5px;
+  background-color: #eee;
+  border-radius: 5px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.9);
+}
+
+.down {
+  font-size: 25px;
+  height: 65vh;
+  border: 2px solid #eee;
+  background-color: #b3c0d1;
+}
+
+
+
+
 </style>
