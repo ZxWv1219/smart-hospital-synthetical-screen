@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 
 const Home = () => import('@/views/Home')
+const Login = () => import('@/views/Login')
 
 Vue.use(VueRouter)
 
@@ -14,6 +15,13 @@ const routes = [
     path: '/home',
     name: 'Home',
     component: Home
+  }, {
+    path: '/login',
+    name: 'Login',
+    component: Login,
+    meta: {
+      keepalive: false
+    }
   }
 ]
 
